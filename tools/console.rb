@@ -43,5 +43,17 @@ breakout1 = Allergy.new(barbara, chicken)
 breakout2 = Allergy.new(joshua, salt)
 breakout3 = Allergy.new(max, bread)
 
-##this should create a new reicpecard  
+## call recipe instances 
+recipe1.users
+
+## this should add ingredients 
+
+##this should create a new reicpecard
+
+## this should add allergy
+barbara.declare_allergy(salt)
+
+## this should return the most recent recipe by user
+joshua.most_recent_recipe
+
 binding.pry 

@@ -11,7 +11,7 @@ class RecipeCard
         @user = user 
         @@all << self 
     end 
-    
+
     def self.all 
         @@all 
     end 

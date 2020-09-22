@@ -13,8 +13,17 @@ class Ingredient
         @@all 
     end 
 
-    ## def self.most_coomom_allergen
-    
+#helper method for most common allergen. this is to count the instances of ingredients
+## that shows up in allergy
+    def user_counter
+        Allergy.all.select{|allergy|allergy.ingredient == self}.count 
+    end
+
+#should return the ingredient
+#instance that the highest number of users are allergic to
+    def self.most_common_allergen
+        Allergy.all.sort_by{|allergies|allergies.ingredient.user_counter}.last.ingredient
+    end 
 end 
 
 
